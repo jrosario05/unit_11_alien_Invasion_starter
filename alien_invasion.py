@@ -10,6 +10,7 @@ class AlienInvasion:
         pygame.display.set_caption("Alien Invasion")
 
         self.running = True
+        self.clock = pygame.time.Clock()
 
     def run_game(self):
         #Game loop
@@ -21,6 +22,7 @@ class AlienInvasion:
                     sys.exit()
 
                 pygame.display.flip()
+                self.clock.tick(60)
 
 
 
