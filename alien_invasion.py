@@ -1,7 +1,7 @@
 """
 Joel Aurelio Rosario
 Alien Invasion
-Change the ship towars the left side and is able to move with up/down keys and also fire from that side as well
+Change the ship towards the left side and is able to move with up/down keys and also fire from that side as well
 """
 
 import sys
