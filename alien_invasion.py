@@ -1,3 +1,9 @@
+"""
+Joel Aurelio Rosario
+Alien Invasion
+Change the ship towars the left side and is able to move with up/down keys and also fire from that side as well
+"""
+
 import sys
 import pygame
 from settings import Settings
