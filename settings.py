@@ -20,6 +20,7 @@ class Settings:
         self.bullet_w = 25
         self.bullet_h = 80
         self.bullet_amount = 5
+        self.impact_sound = Path.cwd() /'Assets' / 'sound'/ 'impactSound.mp3'
 
         self.alien_file = Path.cwd() /'Assets' / 'images'/ 'enemy_4.png'
         self.alien_w = 40

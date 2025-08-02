@@ -47,15 +47,11 @@ class AlienFleet:
         x_offset = int((screen_w - fleet_horizontal_space )//2)
         y_offset = int((half_screen -fleet_vertical_space)//2)
         return x_offset,y_offset
-            
 
 
-
-
-
-    def calculate_flee_size(self, alien_w, screen_w, aline_h, screen_h):
+    def calculate_flee_size(self, alien_w, screen_w, alien_h, screen_h):
         fleet_w = (screen_w//alien_w)
-        fleet_h = ((screen_h /2)//aline_h)
+        fleet_h = ((screen_h /2)//alien_h)
 
         if fleet_w % 2 == 0:
             fleet_w -= 1
@@ -93,5 +89,17 @@ class AlienFleet:
         alien: 'Alien'
         for alien in self.fleet:
             alien.draw_alien()
+
+
+    def _check_collisions(self, other_group):
+        return pygame.sprite.groupcollide(self.fleet, other_group, True, True)
+    
+    def check_fleet_bottom(self):
+        alien: Alien
+        for alien in self.fleet:
+            if alien.rect.bottom >= self.settings.screen_h:
+                return True
+        return False
+
 
 
